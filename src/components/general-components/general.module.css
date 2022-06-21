@@ -35,9 +35,12 @@
     border-radius: 30px;
 }
 
-.generalInput input {
-    /* padding: 0.5rem; */
+.generalInput input{
     border: none;
+}
+
+.generalInput input:focus {
+    outline: none;
 }
 
 .generalInput button {

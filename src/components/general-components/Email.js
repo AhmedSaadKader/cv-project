@@ -4,58 +4,46 @@ import styles from "./general.module.css";
 class Email extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      email: "",
-      isEditable: true,
-    };
   }
 
-  handleChange = (e) => {
-    this.setState({
-      email: e.target.value,
-    });
-  };
-
-  handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      this.setState({
-        isEditable: false,
-      });
-    }
-  };
-
-  editDiv = (e) => {
-    this.setState({
-      isEditable: true,
-    });
-  };
-
-  confirmEntry = (e) => {
-    this.setState({
-      isEditable: false,
-    });
-  };
-
   render() {
-    const { email, isEditable } = this.state;
-    const { checkIcon, editIcon } = this.props;
+    const {
+      checkIcon,
+      editIcon,
+      handleChange,
+      handleKeyDown,
+      editDiv,
+      confirmEntry,
+      email,
+    } = this.props;
+
+    console.log(this.props);
 
     return (
       <div>
-        {isEditable ? (
+        {email.isEditable ? (
           <div className={styles.generalInput}>
             <input
+              name="email"
               placeholder="Email"
-              value={email}
-              onChange={this.handleChange}
-              onKeyDown={this.handleKeyDown}
+              value={email.text}
+              onChange={handleChange}
+              onKeyDown={handleKeyDown}
             ></input>
-            <button onClick={this.confirmEntry}>{checkIcon}</button>
+            <button onClick={confirmEntry} data-name="email">
+              {checkIcon}
+            </button>
           </div>
         ) : (
-          <div className={styles.displayGeneralDiv} onClick={this.editDiv}>
-            {email ? email : "Email"}
-            <button>{editIcon}</button>
+          <div
+            className={styles.displayGeneralDiv}
+            onClick={editDiv}
+            data-name="email"
+          >
+            {email.text ? email.text : "Email"}
+            <button data-name="email" onClick={editDiv}>
+              {editIcon}
+            </button>
           </div>
         )}
       </div>
