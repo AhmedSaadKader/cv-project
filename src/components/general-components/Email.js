@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styles from "./general.module.css";
 
 class Email extends Component {
   constructor(props) {
@@ -37,24 +38,24 @@ class Email extends Component {
 
   render() {
     const { email, isEditable } = this.state;
-    const { element } = this.props;
+    const { checkIcon, editIcon } = this.props;
 
     return (
       <div>
         {isEditable ? (
-          <div>
+          <div className={styles.generalInput}>
             <input
               placeholder="Email"
               value={email}
               onChange={this.handleChange}
               onKeyDown={this.handleKeyDown}
             ></input>
-            <button onClick={this.confirmEntry}>{element}</button>
+            <button onClick={this.confirmEntry}>{checkIcon}</button>
           </div>
         ) : (
-          <div onClick={this.editDiv}>
+          <div className={styles.displayGeneralDiv} onClick={this.editDiv}>
             {email ? email : "Email"}
-            <button>Edit</button>
+            <button>{editIcon}</button>
           </div>
         )}
       </div>

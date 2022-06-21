@@ -1,17 +1,18 @@
 import React, { Component } from "react";
+import styles from "./general.module.css";
 
-class FullName extends Component {
+class Address extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      fullName: "",
+      address: "",
       isEditable: true,
     };
   }
 
   handleChange = (e) => {
     this.setState({
-      fullName: e.target.value,
+      address: e.target.value,
     });
   };
 
@@ -36,25 +37,25 @@ class FullName extends Component {
   };
 
   render() {
-    const { fullName, isEditable } = this.state;
-    const { element } = this.props;
+    const { address, isEditable } = this.state;
+    const { checkIcon, editIcon } = this.props;
 
     return (
       <div>
         {isEditable ? (
-          <div>
+          <div className={styles.generalInput}>
             <input
-              placeholder="Enter Full Name"
-              value={fullName}
+              placeholder="Enter your address"
+              value={address}
               onChange={this.handleChange}
               onKeyDown={this.handleKeyDown}
             ></input>
-            <button onClick={this.confirmEntry}>{element}</button>
+            <button onClick={this.confirmEntry}>{checkIcon}</button>
           </div>
         ) : (
-          <div onClick={this.editDiv}>
-            {fullName ? fullName : "Your Name"}
-            <button>Edit</button>
+          <div className={styles.displayGeneralDiv} onClick={this.editDiv}>
+            {address ? address : "Your Address"}
+            <button>{editIcon}</button>
           </div>
         )}
       </div>
@@ -62,4 +63,4 @@ class FullName extends Component {
   }
 }
 
-export default FullName;
+export default Address;

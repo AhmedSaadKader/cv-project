@@ -1,0 +1,46 @@
+
+.generalInformation {
+    grid-row: 1/4;
+}
+
+.generalInformation fieldset{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    max-width: 200px;
+
+}
+
+.photoDiv {
+    max-width: 180px;
+}
+
+.professionalPhoto {
+    border-radius: 50%;
+    width: 220px;
+}
+
+.displayGeneralDiv {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0.25rem;
+}
+
+.generalInput {
+    display: flex;
+    margin-top: 1rem;
+    border: 1px solid black;
+    padding: 0.3rem;
+    border-radius: 30px;
+}
+
+.generalInput input {
+    /* padding: 0.5rem; */
+    border: none;
+}
+
+.generalInput button {
+    background-color: white;
+    border: none;
+}
