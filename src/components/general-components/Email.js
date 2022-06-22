@@ -17,7 +17,7 @@ class Email extends Component {
       email,
     } = this.props;
 
-    console.log(this.props);
+    console.log(email.text);
 
     return (
       <div>

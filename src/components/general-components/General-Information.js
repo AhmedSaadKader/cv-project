@@ -12,10 +12,6 @@ class GeneralInformation extends Component {
   constructor(props) {
     super(props);
 
-    let emailText = "";
-    let phoneText = "";
-    let addressText = "";
-
     this.state = {
       email: { text: "", isEditable: true },
       phoneNumber: { text: "", isEditable: true },
