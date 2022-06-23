@@ -1,0 +1,54 @@
+.skillsDiv {
+    grid-row: 4/5;
+}
+
+.skillsTitle {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 220px;
+    padding-inline-start: 0.75em;
+
+}
+
+.skillsTitle button {
+    border: none;
+    background-color: white;
+}
+
+.skillsInput {
+    display: flex;
+    margin-top: 1rem;
+    border: 1px solid black;
+    padding: 0.3rem;
+    border-radius: 30px;
+    max-width: 210px;
+    margin-left: 15px;
+}
+
+.skillsInput input {
+    border: none;
+    max-width: 200px;
+}
+
+.skillsInput input:focus {
+    outline: none;
+}
+
+.skillsInput button {
+    background-color: white;
+    border: none;
+}
+
+.skillsDisplayDiv {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0.3rem;
+    max-width: 200px;
+}
+
+.skillsDisplayDiv button {
+    border: none;
+    background-color: white;
+}

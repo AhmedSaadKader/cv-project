@@ -16,17 +16,27 @@
     border: none;
 }
 
+.basicNameInput input:focus {
+    outline: none;
+}
+
+.basicNameInput button {
+    background-color: white;
+    border: none;
+    font-size: larger;
+}
+
 .basicTitleInput input {
     padding: 0.25rem;
     font-size: 1.05rem;
     border: none;
 }
 
-.basicInput input:focus {
+.basicTitleInput input:focus {
     outline: none;
 }
 
-.basicInput button {
+.basicTitleInput button {
     background-color: white;
     border: none;
     font-size: larger;

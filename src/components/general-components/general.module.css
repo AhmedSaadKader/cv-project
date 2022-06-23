@@ -1,6 +1,7 @@
 
 .generalInformation {
     grid-row: 1/4;
+    margin: auto;
 }
 
 .generalInformation fieldset{
