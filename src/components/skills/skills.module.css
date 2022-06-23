@@ -8,7 +8,7 @@
     justify-content: space-between;
     max-width: 220px;
     padding-inline-start: 0.75em;
-
+    margin-left: 5px;
 }
 
 .skillsTitle button {
@@ -23,7 +23,8 @@
     padding: 0.3rem;
     border-radius: 30px;
     max-width: 210px;
-    margin-left: 15px;
+    margin-left: 20px;
+
 }
 
 .skillsInput input {
