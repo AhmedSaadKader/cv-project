@@ -8,7 +8,6 @@
     flex-direction: column;
     border: none;
     max-width: 200px;
-
 }
 
 .photoDiv {
@@ -25,6 +24,12 @@
     justify-content: space-between;
     margin-top: 1rem;
     padding: 0.25rem;
+    max-width: 200px;
+}
+
+.displayGeneralDiv button {
+    border: none;
+    background-color: white;
 }
 
 .generalInput {
@@ -37,6 +42,7 @@
 
 .generalInput input{
     border: none;
+    max-width: 200px;
 }
 
 .generalInput input:focus {
@@ -46,4 +52,16 @@
 .generalInput button {
     background-color: white;
     border: none;
+}
+
+
+
+.onlineDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.onlineDiv button{
+    border: none;
+    background-color: white;
 }

@@ -1,18 +1,18 @@
 import React, { Component } from "react";
-import styles from "./general.module.css";
 
-class Address extends Component {
+class InputAndResult extends Component {
   constructor(props) {
     super(props);
+    const dataName = props.name;
     this.state = {
-      address: "",
+      [dataName]: "",
       isEditable: true,
     };
   }
 
   handleChange = (e) => {
     this.setState({
-      address: e.target.value,
+      [this.props.name]: e.target.value,
     });
   };
 
@@ -37,25 +37,28 @@ class Address extends Component {
   };
 
   render() {
-    const { address, isEditable } = this.state;
-    const { checkIcon, editIcon } = this.props;
+    const { isEditable } = this.state;
+    const { name, checkIcon, editIcon, inputStyle, displayStyle } = this.props;
+    const data = this.props.name;
 
     return (
       <div>
         {isEditable ? (
-          <div className={styles.generalInput}>
+          <div className={inputStyle}>
             <input
-              placeholder="Enter your address"
-              value={address}
+              placeholder={name}
+              value={this.state[data]}
               onChange={this.handleChange}
               onKeyDown={this.handleKeyDown}
             ></input>
             <button onClick={this.confirmEntry}>{checkIcon}</button>
           </div>
         ) : (
-          <div className={styles.displayGeneralDiv} onClick={this.editDiv}>
-            {address ? address : "Your Address"}
-            <button>{editIcon}</button>
+          <div className={displayStyle} onClick={this.editDiv}>
+            {this.state[data] ? this.state[data] : name}
+            <div>
+              <button>{editIcon}</button>
+            </div>
           </div>
         )}
       </div>
@@ -63,4 +66,4 @@ class Address extends Component {
   }
 }
 
-export default Address;
+export default InputAndResult;

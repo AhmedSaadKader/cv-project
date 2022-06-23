@@ -1,0 +1,52 @@
+.basicInformation {
+
+}
+
+.basicNameInput, .basicTitleInput {
+    margin-top: 0.25rem;
+    /* border: 1px solid black; */
+    width: fit-content;
+    border-radius: 10%;
+    padding: 1rem;
+}
+
+.basicNameInput input {
+    padding: 0.25rem;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.basicTitleInput input {
+    padding: 0.25rem;
+    font-size: 1.05rem;
+    border: none;
+}
+
+.basicInput input:focus {
+    outline: none;
+}
+
+.basicInput button {
+    background-color: white;
+    border: none;
+    font-size: larger;
+}
+
+.displayNameDiv {
+    font-size: xx-large;
+    padding: 1rem;
+    padding-bottom: 0.2rem;
+    width: fit-content;
+    min-width: 320px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.displayTitleDiv {
+    font-size: large;
+    padding: 1rem;
+    width: fit-content;
+    min-width: 292px;
+    display: flex;
+    justify-content: space-between;
+}

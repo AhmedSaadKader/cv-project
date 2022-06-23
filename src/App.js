@@ -1,15 +1,15 @@
 import "./App.css";
-import GeneralInformation from "./components/general-components/General-Information";
-import EducationalExperience from "./components/Educational-Experience";
-import PracticalExperience from "./components/Practical-Experience";
-import BasicInfo from "./components/Basic-info";
+import GeneralComponents from "./components/general-components/GeneralComponents";
+import EducationalExperience from "./components/Education/Educational-Experience";
+import PracticalExperience from "./components/work/Practical-Experience";
+import BasicInfo from "./components/NameAndTitle/Basic-info";
 import { Component } from "react";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <GeneralInformation />
+        <GeneralComponents />
         <BasicInfo />
         <EducationalExperience />
         <PracticalExperience />
