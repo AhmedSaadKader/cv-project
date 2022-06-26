@@ -38,7 +38,7 @@ class InputAndResult extends Component {
 
   render() {
     const { isEditable } = this.state;
-    const { name, checkIcon, editIcon, inputStyle, displayStyle } = this.props;
+    const { name, checkIcon, editIcon, inputStyle, displayStyle, inputType } = this.props;
     const data = this.props.name;
 
     return (
@@ -46,6 +46,7 @@ class InputAndResult extends Component {
         {isEditable ? (
           <div className={inputStyle}>
             <input
+              type={inputType}
               placeholder={name}
               value={this.state[data]}
               onChange={this.handleChange}

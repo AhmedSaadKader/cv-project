@@ -1,4 +1,4 @@
-const wrapperComponent = (Component, name, checkIcon, editIcon, inputStyle, displayStyle, deleteIcon) => () =>
+const wrapperComponent = (Component, name, checkIcon, editIcon, inputStyle, displayStyle, inputType) => () =>
   (
     <Component
       name={name}
@@ -6,7 +6,7 @@ const wrapperComponent = (Component, name, checkIcon, editIcon, inputStyle, disp
       editIcon={editIcon}
       inputStyle={inputStyle}
       displayStyle={displayStyle}
-      deleteIcon={deleteIcon}
+      inputType={inputType}
     />
   );
 

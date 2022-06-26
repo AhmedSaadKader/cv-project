@@ -28,15 +28,17 @@ class Skills extends Component {
 
   addLink = () => {
     if (this.state.totalSkills.length < 3) {
-      const NewSkill = wrapperComponent(
-        InputAndResult,
-        "skill",
-        checkIcon,
-        editIcon,
-        inputSkillStyle,
-        displaySkillStyle,
-        deleteIcon
-      );
+      function NewSkill() {
+        return (
+          <InputAndResult
+            name="skill"
+            checkIcon={checkIcon}
+            editIcon={editIcon}
+            inputStyle={inputSkillStyle}
+            displayStyle={displaySkillStyle}
+          />
+        );
+      }
       const linkWithID = { skill: NewSkill, id: this.state.totalSkills.length };
       this.setState({
         totalSkills: this.state.totalSkills.concat(linkWithID),

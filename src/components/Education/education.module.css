@@ -1,0 +1,48 @@
+.educationDiv {
+
+}
+
+.educationHTitle button {
+    background-color: white;
+    border: none;
+}
+
+.educationHTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dialogForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dialogForm label {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.educationInput {
+    font-size: smaller;
+}
+
+.educationInput button {
+    background-color: white;
+    border: none;
+}
+
+.educationDisplayDiv {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0.5rem;
+    border-bottom: 1px solid #888888;
+}
+
+.dateDiv {
+    display: flex;
+        width: 60px;
+}

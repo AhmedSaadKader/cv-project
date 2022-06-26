@@ -4,7 +4,6 @@
 
 .basicNameInput, .basicTitleInput {
     margin-top: 0.25rem;
-    /* border: 1px solid black; */
     width: fit-content;
     border-radius: 10%;
     padding: 1rem;
@@ -52,11 +51,21 @@
     justify-content: space-between;
 }
 
+.displayNameDiv button {
+    background-color: white;
+    border: none;
+}
+
 .displayTitleDiv {
-    font-size: large;
+    font-size: x-large;
     padding: 1rem;
     width: fit-content;
     min-width: 292px;
     display: flex;
     justify-content: space-between;
+}
+
+.displayTitleDiv button {
+    background-color: white;
+    border: none;
 }

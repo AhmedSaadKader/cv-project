@@ -18,7 +18,7 @@
 
 .skillsInput {
     display: flex;
-    margin-top: 1rem;
+    margin-bottom: 0.5rem;
     border: 1px solid black;
     padding: 0.3rem;
     border-radius: 30px;
@@ -44,9 +44,10 @@
 .skillsDisplayDiv {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin-bottom: 0.5rem;
     padding: 0.3rem;
     max-width: 200px;
+    margin-left: 20px;
 }
 
 .skillsDisplayDiv button {
