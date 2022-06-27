@@ -11,12 +11,12 @@ body {
   box-shadow:5px 10px #888888;
   display: grid;
   grid-template-columns: minmax(250px, 1fr) minmax(300px, 5fr);
-  /* grid-template-rows: 1fr 3fr 3fr 3fr 3fr; */
   grid-template-rows: 120px minmax(min-content, max-content) ;
   min-height: 100vh;
   margin: 50px auto;
   max-width: min-content;
-  min-width: 675px;
+  min-width: 800px;
   background-color: white;
+  overflow-wrap: anywhere;
 }
 

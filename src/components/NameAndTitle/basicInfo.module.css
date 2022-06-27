@@ -1,5 +1,5 @@
 .basicInformation {
-
+    grid-row: 1/3;
 }
 
 .basicNameInput, .basicTitleInput {
