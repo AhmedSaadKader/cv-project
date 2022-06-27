@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 import styles from "./education.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+
+const deleteIcon = <FontAwesomeIcon icon={faTrash} />;
+const editButton = <FontAwesomeIcon icon={faPenToSquare} />;
 
 class EducationDisplayAndInput extends Component {
   constructor(props) {
@@ -14,32 +20,39 @@ class EducationDisplayAndInput extends Component {
   };
 
   deleteExp = () => {
-    this.setState = {
+    this.setState({
       displayDivs: [],
-    };
+    });
+    console.log(this.state.displayDivs);
   };
 
   createExperience = (e) => {
     const EducationDisplay = () => (
-      <div className={styles.educationDisplayDiv}>
-        <div>
-          {e.target.elements.fromDate.value} --- {e.target.elements.toDate.value}
+      <div className={styles.eduDisplayFlex}>
+        <div className={styles.educationDisplayDiv}>
+          <div>
+            {e.target.elements.fromDate.value} --- {e.target.elements.toDate.value}
+          </div>
+          <div>{e.target.elements.school.value}</div>
+          <div>{e.target.elements.degree.value}</div>
+          <div>GPA:{e.target.elements.GPA.value}</div>
         </div>
-        <div>{e.target.elements.school.value}</div>
-        <div>{e.target.elements.degree.value}</div>
-        <div>GPA:{e.target.elements.GPA.value}</div>
-        <button onClick={this.openModal}>Edit</button>
-        <button onClick={this.deleteExp}>Delete</button>
+        <div>
+          <div>
+            <button onClick={this.openModal}>{editButton}</button>
+            <button onClick={this.deleteExp}>{deleteIcon}</button>
+          </div>
+        </div>
       </div>
     );
 
     this.setState({
       displayDivs: [EducationDisplay],
     });
-    console.log(this.state.displayDivs);
   };
 
   render() {
+    console.log("r");
     return (
       <div>
         <dialog id="favDialog" open>

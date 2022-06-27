@@ -24,8 +24,7 @@ class PracticalExperience extends Component {
         <div className={styles.workHTitle}>
           <h1>Work Experience</h1>
           <div>
-            {addIcon}
-            {deleteIcon}
+            <button>{addIcon}</button>
           </div>
         </div>
       </div>

@@ -8,6 +8,10 @@
     justify-content: space-around;
 }
 
+.workHTitle button {
+    background-color: white;
+    border: none;
+}
 .practicalInput {
 
 }

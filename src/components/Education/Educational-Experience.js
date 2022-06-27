@@ -35,7 +35,7 @@ class EducationalExperience extends Component {
         <div className={styles.educationHTitle}>
           <h1>Education</h1>{" "}
           <div>
-            <button onClick={this.onOpen}>{addIcon}</button> <button>{deleteIcon}</button>
+            <button onClick={this.onOpen}>{addIcon}</button>
           </div>
         </div>
         <div>

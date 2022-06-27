@@ -38,8 +38,19 @@
     margin-bottom: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     row-gap: 0.5rem;
     border-bottom: 1px solid #888888;
+}
+
+.eduDisplayFlex button {
+    background-color: white;
+    border: none;
+}
+
+.eduDisplayFlex {
+    display: flex;
+    justify-content: space-around;
 }
 
 .dateDiv {
