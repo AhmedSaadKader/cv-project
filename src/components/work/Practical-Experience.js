@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import styles from "./practical.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import PracticalDisplayAndInput from "./PracticalDisplayAndInput";
 
 const inputStyle = styles.practicalInput;
 const displayStyle = styles.practicalDisplay;
@@ -13,23 +14,33 @@ const editIcon = <FontAwesomeIcon icon={faPen} />;
 const addIcon = <FontAwesomeIcon icon={faPlus} />;
 const deleteIcon = <FontAwesomeIcon icon={faTrash} />;
 
-class PracticalExperience extends Component {
-  constructor(props) {
-    super(props);
-  }
+const PracticalExperience = (props) => {
+  const [workDiv, setWorkdiv] = useState([]);
 
-  render() {
-    return (
-      <div className={styles.practicalDiv}>
-        <div className={styles.workHTitle}>
-          <h1>Work Experience</h1>
-          <div>
-            <button>{addIcon}</button>
-          </div>
+  const addWork = () => {
+    console.log(workDiv);
+    const Work = () => <PracticalDisplayAndInput />;
+    setWorkdiv(workDiv.concat(Work));
+  };
+
+  return (
+    <div className={styles.practicalDiv}>
+      <div className={styles.workHTitle}>
+        <h1>Work Experience</h1>
+        <div>
+          <button onClick={addWork}>{addIcon}</button>
         </div>
       </div>
-    );
-  }
-}
+      <div>
+        <div>
+          {workDiv.map((item) => {
+            const Displa = item;
+            return <Displa />;
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default PracticalExperience;
